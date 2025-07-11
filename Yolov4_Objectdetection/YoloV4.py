@@ -24,7 +24,7 @@ while True:
         break
     frame=cv2.flip(frame,1)
     # Nesne tanıma 
-    (class_ids, scores, bboxes) = model.detect(frame, confThreshold=0.3, nmsThreshold=.4)
+    (class_ids, scores, bboxes) = model.detect(frame, confThreshold=0.3, nmsThreshold=0.4)
     
     # Draw detections with confidence scores
     for class_id, score, bbox in zip(class_ids, scores, bboxes):
